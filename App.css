@@ -1,0 +1,206 @@
+/* General Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+  background-color: #000;
+}
+
+h1, h2 {
+  color: #ff0000;
+}
+
+p, li, a, input, button {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Section Styling */
+.section {
+  padding: 2rem;
+  margin: 0 auto;
+  max-width: 800px;
+  text-align: left;
+}
+
+
+.scroll-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.scroll-button:hover {
+  background-color: transparent;
+}
+.scroll-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Image Animation */
+.scroll-image {
+  width: 60px;
+  height: 60px;
+  animation: bounce 1s infinite;
+}
+
+/* Text Styling */
+.scroll-content span {
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+/* Keyframes for Animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Introduction Section */
+.profile-image {
+  display: block;
+  margin: 1rem auto;
+  border: 2px solid #ff0000;
+}
+
+#introduction p {
+  text-align: justify;
+}
+
+/* Skills Section */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
+  position: relative;
+}
+
+ul li::before {
+  content: '•';
+  color: #ff0000;
+  font-weight: bold;
+  margin-right: 0.5rem;
+  position: absolute;
+  left: 0;
+}
+
+/* Resume Section */
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  font-size: 16px;
+  color: #fff;
+  background-color: #ff0000;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #cc0000;
+}
+
+/* Contact Section */
+.contact-buttons a {
+  display: inline-block;
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Chat Section */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem auto;
+  max-width: 800px;
+  text-align: left;
+}
+
+.chat-input {
+  width: 100%;
+  max-width: 600px;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ff0000;
+  border-radius: 4px;
+  color: #000;
+}
+
+.chat-button {
+  padding: 0.75rem 1.5rem;
+  color: #fff;
+  background-color: #ff0000;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.chat-button:hover {
+  background-color: #cc0000;
+}
+
+.chat-response {
+  width: 80vw;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  margin-top: 0.1rem;
+  margin-bottom: 3rem;
+  padding: 1rem;
+  background-color: #1a1a1a;
+  border: 1px solid #ff0000;
+  border-radius: 4px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section {
+    padding: 1rem;
+  }
+
+  .button, .chat-button {
+    font-size: 14px;
+    padding: 0.5rem 1rem;
+  }
+
+  .chat-input {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1, h2 {
+    font-size: 18px;
+  }
+
+  p, li, a {
+    font-size: 14px;
+  }
+}
